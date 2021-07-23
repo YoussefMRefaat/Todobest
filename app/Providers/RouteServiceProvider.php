@@ -50,7 +50,7 @@ class RouteServiceProvider extends ServiceProvider
              * Add the file of todos' routes through API
              */
             Route::prefix('api/todo')
-                ->middleware(['api' , 'auth:sanctum' , 'verified'])
+                ->middleware(['api' , 'auth:sanctum'])
                 ->namespace('App\\Http\\Controllers\\ApiControllers\\Todo')
                 ->group(base_path('routes/api/todo.php'));
 
@@ -58,7 +58,7 @@ class RouteServiceProvider extends ServiceProvider
              * Add the file of user's routes through API
              */
             Route::prefix('api/user')
-                ->middleware(['api' , 'auth:sanctum' , 'verified'])
+                ->middleware(['api' , 'auth:sanctum'])
                 ->namespace('App\\Http\\Controllers\\ApiControllers\\User')
                 ->group(base_path('routes/api/user.php'));
 
@@ -75,7 +75,7 @@ class RouteServiceProvider extends ServiceProvider
              * Add the file of todos' routes through web
              */
             Route::prefix('/user')
-                ->middleware(['web', 'auth', 'verified'])
+                ->middleware(['web', 'auth'])
                 ->namespace('App\\Http\\Controllers\\WebControllers\\User')
                 ->group(base_path('routes/web/user.php'));
 
@@ -83,7 +83,7 @@ class RouteServiceProvider extends ServiceProvider
              * Add the file of todos' routes through web
              */
             Route::prefix('/todo')
-                ->middleware(['web', 'auth', 'verified'])
+                ->middleware(['web', 'auth'])
                 ->namespace('App\\Http\\Controllers\\WebControllers\\Todo')
                 ->group(base_path('routes/web/todo.php'));
         });
