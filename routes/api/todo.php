@@ -11,40 +11,40 @@ Route::pattern('date' , '[a-z_]+');
 /**
  * @post Add a todo
  */
-Route::post('/add' , 'CreateController@store');
+Route::post('/' , 'CreateController@store');
 
 /**
  * @get Get all user's todos
  */
-Route::get('/all' , 'ShowController@index');
+Route::get('/' , 'ShowController@index');
 
 /**
  * @get Get a specific todo
  *
  * @param int $id - ID of the todo
  */
-Route::get('/show/{id}' , 'ShowController@show');
+Route::get('/{id}' , 'ShowController@show');
 
 /**
  * @patch Mark a todo as done
  *
  * @param int $id - ID of the todo
  */
-Route::patch('/done/{id}' , 'UpdateController@toDone');
+Route::patch('/{id}/done' , 'UpdateController@toDone');
 
 /**
  * @patch Mark a todo as undone
  *
  * @param int $id - ID of the todo
  */
-Route::patch('/undone/{id}' , 'UpdateController@toUndone');
+Route::patch('/{id}/undone' , 'UpdateController@toUndone');
 
 /**
  * @patch Update a todo
  *
  * @param int $id
  */
-Route::patch('/update/{id}' , 'UpdateController@update');
+Route::patch('/{id}' , 'UpdateController@update');
 
 /**
  * @patch Clear a date value - set it to null
@@ -52,11 +52,11 @@ Route::patch('/update/{id}' , 'UpdateController@update');
  * @param string $date - name of the column
  * @param int $id - ID of the todo
  */
-Route::patch('/update/clear-{date}/{id}' , 'UpdateController@clearDate');
+Route::patch('/{id}/clear-{date}' , 'UpdateController@clearDate');
 
 /**
  * @delete Delete a todo
  *
  * @param int $id - ID of the todo
  */
-Route::delete('/delete/{id}' , 'DeleteController@destroy');
+Route::delete('/{id}' , 'DeleteController@destroy');

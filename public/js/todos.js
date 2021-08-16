@@ -5,7 +5,7 @@ function add(){
     var todo = document.getElementById('todo');
     // initialize Http Request
     var obj = new XMLHttpRequest();
-    obj.open('POST' , 'http://127.0.0.1:8000/todo/create');
+    obj.open('POST' , '/todos/');
     // handle Laravel CSRF protection
     obj.setRequestHeader("X-CSRF-TOKEN", document.head.querySelector('[name="csrf-token"]').content );
     // set the type of request and what request expects as a response
@@ -32,7 +32,7 @@ function add(){
 function done(todoId){
     // initialize Http Request
     var obj = new XMLHttpRequest();
-    obj.open('PATCH' , 'http://127.0.0.1:8000/todo/done/' + todoId);
+    obj.open('PATCH' , '/todos/' + todoId + '/done');
     // handle Laravel CSRF protection
     obj.setRequestHeader("X-CSRF-TOKEN", document.head.querySelector('[name="csrf-token"]').content );
     // set the type of request and what request expects as a response
@@ -73,7 +73,7 @@ function changeElements(div , span , i){
 function del(todoId){
     // initialize Http Request
     var obj = new XMLHttpRequest();
-    obj.open('DELETE' , '/todo/delete/' + todoId);
+    obj.open('DELETE' , '/todos/' + todoId);
     // handle Laravel CSRF protection
     obj.setRequestHeader("X-CSRF-TOKEN", document.head.querySelector('[name="csrf-token"]').content );
     // set the type of request and what request expects as a response

@@ -48,7 +48,7 @@ class UpdateController extends ApiController
      * @param int $id
      * @return \Illuminate\Http\JsonResponse
      */
-    public function clearDate(string $date,int $id): \Illuminate\Http\JsonResponse
+    public function clearDate(int $id ,string $date): \Illuminate\Http\JsonResponse
     {
         // Try to access the todo
         $todo = $this->access($id);

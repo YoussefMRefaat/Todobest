@@ -5,19 +5,19 @@ use Illuminate\Support\Facades\Route;
 /**
  * @get Show an update user form
  */
-Route::get('/update' , 'UpdateController@update')->name('updateUser');
+Route::get('/' , 'UpdateController@update')->name('updateUser');
 
 /**
  * @patch Update user's information
  */
-Route::patch('/update' , 'UpdateController@store')->name('storeUpdateUser');
+Route::patch('/' , 'UpdateController@store')->name('storeUpdateUser');
 
 /**
  * @get Show an update user's password form
  */
-Route::get('/update/password' , 'UpdateController@updatePassword')->name('updatePassword');
+Route::get('/password' , 'UpdateController@updatePassword')->name('updatePassword');
 
 /**
  * @patch Update the user's password
  */
-Route::patch('/update/password' , 'UpdateController@storePassword')->name('storeUpdatePassword');
+Route::patch('/password' , 'UpdateController@storePassword')->name('storeUpdatePassword');

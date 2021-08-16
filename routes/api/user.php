@@ -3,11 +3,16 @@
 use Illuminate\Support\Facades\Route;
 
 /**
+ * @get get user's information
+ */
+Route::get('/' , 'ShowController@Show');
+
+/**
  * @patch Update user's information
  */
-Route::patch('/update' , 'UpdateController@update');
+Route::patch('/' , 'UpdateController@update');
 
 /**
  * @patch Update the user's password
  */
-Route::patch('/update/password' , 'UpdateController@updatePassword');
+Route::patch('/password' , 'UpdateController@updatePassword');
