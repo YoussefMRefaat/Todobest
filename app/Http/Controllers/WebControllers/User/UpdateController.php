@@ -20,7 +20,7 @@ class UpdateController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function update(): \Illuminate\View\View
+    public function edit(): \Illuminate\View\View
     {
         // Try to access user's data
         $user = User::findOrFail(auth()->id());
@@ -35,7 +35,7 @@ class UpdateController extends Controller
      * @param UpdateUserRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(UpdateUserRequest $request): \Illuminate\Http\RedirectResponse
+    public function update(UpdateUserRequest $request): \Illuminate\Http\RedirectResponse
     {
         // Validate the inputs
         $validated = $request->validated();
@@ -52,7 +52,7 @@ class UpdateController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function updatePassword(): \Illuminate\View\View
+    public function editPassword(): \Illuminate\View\View
     {
         // Return the view
         return view('user.update-password');
@@ -64,7 +64,7 @@ class UpdateController extends Controller
      * @param UpdatePasswordRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function storePassword(UpdatePasswordRequest $request): \Illuminate\Http\RedirectResponse
+    public function updatePassword(UpdatePasswordRequest $request): \Illuminate\Http\RedirectResponse
     {
         // Validate the inputs
         $validated = $request->validated();
