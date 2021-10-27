@@ -2,29 +2,25 @@
 
 ## Introduction
 
-- A simple todo list app that is built using **Laravel & AJAX**
+- A simple todo list app in **Laravel & AJAX**
 
 
-- I built this project to practice on what I had learned in backend development.
-
-
-## Version 1.0 features
+## Features
 
 #### The user can :-
-1. Sign up
-2. Login and logout
-3. Create, done, undone, and delete a todo
-4. Update his information including password 
+1. Sign-up, Sign-in, and logout
+2. Create, done, undone, and delete a todo
+3. Update account settings and password
 
 ###### API only features
-5. Update a specific todo
-6. Handle due date and reminder of todos
+1. Update a specific todo
+2. Set due dates and reminders of todos
 
 ###### Web only features
-6. Verify his email
-7. Reset the password
+1. Verify the email
+2. Reset the password
 
-## Frontend
+## Front-end
 
 - Views are just for testing backend and practicing on blades. 
   <br> <br>
@@ -39,12 +35,12 @@
 
 - #### Note : I converted these HTML files into blades. Then I modified & reformed some parts to make them appropriate for the project 
 
-## Prerequisites
+## Packages
+[Laravel Sanctum](https://laravel.com/docs/8.x/sanctum) <br>
 
-PHP >= 8.0  
-Laravel >= 8.40  
-laravel/breeze >= 1.1.7  
-laravel/sanctum >= 2.11
+[Laravel Breeze](https://laravel.com/docs/8.x/starter-kits#laravel-breeze) <br>
+
+
 
 ## License
 
